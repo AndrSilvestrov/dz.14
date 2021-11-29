@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&family=Montserrat:wght@400;700&family=Roboto+Slab:wght@200&display=swap" 
+      rel="stylesheet">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 942px;
+            margin: 0 auto;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 90px;
+        }
+        .list-nav{
+            list-style: none;
+            display: flex;
+                }
+
+        .link-nav{
+            text-transform: uppercase;
+            text-decoration: none;
+            color: #FED136;
+            
+        }
+
+        .li-nav{
+            margin-right: 30px;
+        }
+
+        .li-nav:last-child{
+            margin-right: 0px;
+        }
+
+        .golden{
+            color:#FED136;
+            text-decoration: none;
+        }
+        .Montserat{
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .Bilbo{
+            font-family: 'Bilbo Swash Caps', cursive;
+            font-size: 36px;
+        }
+
+        .Robotoslab{
+            font-family: 'Roboto Slab', serif;
+            color: #777777;
+            font-size: 14px;
+        }
+
+        .Montserat-700{
+            font-weight: 700;
+        }
+
+        .services{
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 93px;
+        }
+
+        .service-img{
+            width: 70px;
+            height: 69px;
+        }
+
+        .list-service{
+            list-style: none;
+            margin-right: 26px;
+        }
+
+        .text-services{
+            width: 304px;
+            height: 56px;
+        }
+
+        .service{
+            display: flex;
+            text-align: center;
+        }
+
+        .black{
+            background-color: #222222;
+            height: 679px;
+        }
+
+        .white{
+            color:#FFFFFF;
+            text-transform: uppercase;
+            
+        }
+
+        .contact{
+            text-align: center;
+            padding-top: 92px;
+        }
+
+        .input{
+            width: 455px;
+            height: 50px;
+            background-color: #FFFFFF;
+            text-transform: uppercase;
+            margin-top: 28px;
+            }
+
+            .inputs{
+                display: flex;
+                flex-direction: column;
+                }
+            .input:first-child{
+                margin-top: 0px;
+            }
+            .textarea{
+                text-transform: uppercase;
+                width: 458px;
+                height: 212px;
+                margin-left: 27px;
+            }
+
+            .inputs-and-textarea{
+                display: flex;
+                margin-top: 114px;
+                justify-content: center;
+            }
+
+            .button{
+              background-color: #FED136;  
+              width: 242px;
+              height: 68px;
+              position: relative;
+              
+            }
+
+            .form-button{
+                text-align: center;
+                margin-top: 47px;
+            }
+
+            .list-style-none{
+                list-style: none;
+            }
+            body{
+                margin: 0px;
+            }
+
+            .button:before{
+                content:"" ;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-color: white;
+                position: absolute;
+                top: -10px;
+                left: -10px;
+            }
+
+            .button::after{
+                content:"" ;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                background-color: white;
+                position: absolute;
+                right: -10px;
+                bottom: -10px;
+            }
+
+            .checkbox-orig{
+                display: none;
+            }
+
+            .checkbox-fake{
+                display: inline-block;
+                height: 20px;
+                width: 20px;
+                border: 1px solid blue;
+                background-color: white;
+                border-radius: 50%;
+                position: relative;
+            }
+
+            .checkbox-fake:before{
+                content: "";
+                display: inline-block;
+                height: 9px;
+                width: 9px;
+                border-radius: 50%;
+                background-color: transparent;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .checkbox-orig:checked~.checkbox-fake::before{
+                background-color: blue;
+            }
+
+            .checkbox-fake-bird{
+                border-radius: 5px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                border: 1px solid blue;
+                background-color: white;
+                position: relative;
+                
+            }
+
+            .checkbox-fake-bird::before{
+                content: "";
+                display: inline-block;
+                height: 9px;
+                width: 9px;
+                background:url(./file-svg-tick-11563048567dqhml3fwlm.png);
+                background-size: cover;
+                visibility: hidden;
+                position: absolute;
+                left: 25%;
+                top: 25%;
+            }
+
+            .checkbox-original:checked~.checkbox-fake-bird::before{
+                visibility: visible;
+            }
+
+            .checkbox-original{
+                display: none;
+            }
+
+            
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="golden Bilbo">Golden</a>
+            <nav>
+                <ul class="list-nav">
+                    <li class="li-nav"><a href="#" class="link-nav Montserat">home</a></li>
+                    <li class="li-nav"><a href="#" class="link-nav Montserat">services</a></li>
+                    <li class="li-nav"><a href="#" class="link-nav Montserat">portfolio</a></li>
+                    <li class="li-nav"><a href="#" class="link-nav Montserat">about</a></li>
+                    <li class="li-nav"><a href="#" class="link-nav Montserat">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main><div>
+            <h1 class="Montserat Montserat-700 services">services</h1>
+        
+            <ul class="service">
+                <li class="list-service">
+                    <li class="list-style-none"><img src="./backet.JPG" alt="backet" class="service-img">
+                        <p class="Montserat Montserat-700">E-Commerce</p>
+                        <p class="Robotoslab text-services">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora
+                            entum suscipit aenean rhoncus posuere odio in
+                            tincidunt.</p>
+                    </li>
+                </li>
+        
+                <li class="list-service">
+                    <li class="list-style-none"><img src="./backet.JPG" alt="backet" class="service-img">
+                        <p class="Montserat Montserat-700">Responsive Web</p>
+                        <p class="Robotoslab text-services">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora
+                            entum
+                            suscipit aenean rhoncus posuere odio in
+                            tincidunt.</p>
+                    </li>
+                </li>
+        
+                <li class="list-service">
+                    <li class="list-style-none"><img src="./backet.JPG" alt="backet" class="service-img">
+                        <p class="Montserat Montserat-700">Web Security</p>
+                        <p class="Robotoslab text-services">Proin iaculis purus consequat sem cure digni ssim. Donec porttitora
+                            entum
+                            suscipit aenean rhoncus posuere odio in
+                            tincidunt.</p>
+                    </li>
+                </li>
+        
+            </ul>
+        
+        </div>
+    </div>
+    <div class="black">
+        <div class="container">
+        <h2 class="Montserat Montserat-700 white contact">contact us</h2>
+        <form class="form">
+            <div class="inputs-and-textarea">
+            <div class="inputs">
+                <input type="text" placeholder="your name*" class="input Montserat Montserat-700">
+                <input type="text" placeholder="your e-mail*" class="input Montserat Montserat-700">
+                <input type="text" placeholder="subject" class="input Montserat Montserat-700">
+            </div>
+            <div class="textarea"><textarea placeholder="Your message *"
+                class="Montserat Montserat-700 textarea"></textarea></div>
+                </div>
+        <div class="form-button">
+        <button class="button white Montserat Montserat-700" type="submit">Send Message</button>
+        </div>
+        <label class="form-checkbox">
+            <input type="checkbox" class="checkbox-orig">
+            <div class="checkbox-fake"></div>
+        </label>
+
+        <label class="form-checkbox-tick">
+            <input type="checkbox" class="checkbox-original">
+            <div class="checkbox-fake-bird"></div>
+        </label>
+        
+        </form>
+        </div>
+    </div>
+
+</main>
+
+        
+    
+    
+</body>
+</html>
